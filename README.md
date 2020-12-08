@@ -58,6 +58,7 @@ number | string | null:false
 building | string | 
 user_id | references |null:false
 
+＃buyer
 user_id | integer | null: false
 first_name | string | null: false
 family_name | string | null: false
