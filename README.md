@@ -42,9 +42,8 @@ item_name | string| null: false
 explanation | text | null: false
 category_id | integer | null: false
 condition_id | integer | null: false
-delibary_charge_id | integer | null: false
-delibary_day_id | integer | null: false
-delibary_way_id | integer | null: false
+delivery_charge_id | integer | null: false
+delivery_day_id | integer | null: false
 area_id | integer | null: false
 price | integer | null: false
 user_id | integer |null:false foreign_key: true
@@ -54,11 +53,11 @@ has_one:buyer
 
 ＃addresses
 post_code | string | null:false
-country | string | null:false
-delibary_way_id | integer | null:false
+area_id | integer | null: false
 city | string | null:false
 address_number | string | null:false
-phon_number | string | null:false
+building | string | 
+phone_number | string | null:false
 belongs_to:user
 
 ＃buyer
@@ -66,4 +65,4 @@ user_id | integer | null: false foreign_key: true
 item_id | integer | null: false foreign_key: true
 belongs_to:user
 belongs_to:item
-belongs_to:addresses
+belongs_to:address
