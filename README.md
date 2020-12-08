@@ -58,11 +58,11 @@ city | string | null:false
 address_number | string | null:false
 building | string | 
 phone_number | string | null:false
-belongs_to:user
+has_one:user
 
 ＃buyer
 user_id | integer | null: false foreign_key: true
 item_id | integer | null: false foreign_key: true
 belongs_to:user
 belongs_to:item
-belongs_to:address
+has_one:address
