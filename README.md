@@ -60,11 +60,12 @@ user_id | references |null:false
 
 ＃buyer
 user_id | integer | null: false
+item_id | integer | null: false
 first_name | string | null: false
 family_name | string | null: false
 first_name_kane | string | null: false
 family_name_kana | string | null: false
 post_code | string | null: false
-prefecture | string | null: false
+prefecture | active_hash | null: false
 city | string | null: false
 address | string | null: false
