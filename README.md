@@ -35,8 +35,7 @@ first_name_kana | string | null: false
 family_name_kana | string | null: false
 birthday | date | null: false
 has_many:items
-belongs_to:addresses
-has_many:buyer
+has_many:buyers
 
 ＃items
 item_name | string| null: false
@@ -47,21 +46,24 @@ delibary_charge_id | integer | null: false
 delibary_day_id | integer | null: false
 delibary_way_id | integer | null: false
 area_id | integer | null: false
-price_id | integer | null: false
+price | integer | null: false
 user_id | integer |null:false foreign_key: true
-belongs_to:users
-belongs_to:buyer
+belongs_to:user
+has_one:buyer
 
 
 ＃addresses
+post_code | string | null:false
 country | string | null:false
-prefecture | active_hash | null:false
+delibary_way_id | integer | null:false
 city | string | null:false
-number | string | null:false
-belongs_to:users
+address_number | string | null:false
+phon_number | string | null:false
+belongs_to:user
 
 ＃buyer
-user_id | integer | null: false
-item_id | integer | null: false
-belongs_to:users
-belongs_to:items
+user_id | integer | null: false foreign_key: true
+item_id | integer | null: false foreign_key: true
+belongs_to:user
+belongs_to:item
+belongs_to:addresses
