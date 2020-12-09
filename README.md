@@ -58,7 +58,7 @@ city | string | null:false
 address_number | string | null:false
 building | string | 
 phone_number | string | null:false
-buyer_id | string | null:false foreign_key: true
+buyer_id | integer | null:false foreign_key: true
 belongs_to:buyer
 
 ＃buyer
