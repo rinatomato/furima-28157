@@ -53,7 +53,7 @@ has_one:buyer
 
 ＃addresses
 post_code | string | null:false
-area_id | integer | null: false foreign_key: true
+area_id | integer | null: false
 city | string | null:false
 address_number | string | null:false
 building | string | 
